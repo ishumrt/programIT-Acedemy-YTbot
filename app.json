@@ -1,0 +1,29 @@
+{
+  "name": "YT Downloader Bot",
+  "description": "A telegram bot To Download Youtube Files (by programIT Acedemy) ",
+  "logo": "https://telegra.ph/file/9533ab9f5b5ae1fd3887a.jpg",
+  "keywords": [
+    "Youtube","YoutubeDownloader"
+  ],
+  "repository": "https://github.com/ishumrt/programIT-Acedemy-YTbot",
+  "success_url": "https://t.me/programitytbot",
+  "website": "https://github.com/ishumrt/programIT-Acedemy-YTbot",
+  "env": {
+        "API_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
+        "API_HASH": {"description": "Get this value from https://my.telegram.org" , "required": true},
+        "BOT_TOKEN": {"description": "Get Bot Token From BotFather Bot","required": true}
+  },
+      "buildpacks": [
+        {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"},
+        {"url": "heroku/python"}
+    ],
+  "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+      "stack": "heroku-20"
+
+
+}
